@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Bieber Fan Page</title>
+    <style>
+        body {
+            background-color: #ff69b4;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            animation: colorChange 5s infinite alternate;
+        }
+
+        .header {
+            background-color: #8a2be2;
+            padding: 20px;
+            animation: flash 1s infinite alternate;
+        }
+
+        .header h1 {
+            font-size: 3em;
+        }
+
+        .header h2 {
+            font-size: 2em;
+            animation: rainbow 5s infinite linear;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .justin-pic {
+            width: 300px;
+            height: 200px;
+            border: 5px solid #fff;
+            border-radius: 20px;
+            animation: spin 10s infinite linear;
+        }
+
+        button {
+            background-color: #000;
+            color: #ff69b4;
+            font-size: 1.5em;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+            color: #fff;
+        }
+
+        .music {
+            background-color: #ff4500;
+            padding: 20px;
+            animation: flash 2s infinite alternate;
+        }
+
+        footer {
+            background-color: #4b0082;
+            padding: 10px;
+            animation: flash 3s infinite alternate;
+        }
+
+        @keyframes flash {
+            0% { background-color: #ff69b4; }
+            100% { background-color: #8a2be2; }
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff0000; }
+            25% { color: #ffa500; }
+            50% { color: #ffff00; }
+            75% { color: #008000; }
+            100% { color: #4b0082; }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes colorChange {
+            0% { background-color: #ff69b4; }
+            50% { background-color: #00ffff; }
+            100% { background-color: #ff69b4; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the Justin Bieber Fan Page!</h1>
+        <h2>Bieber Fever is Real!</h2>
+    </div>
+    <div class="content">
+        <img src="https://via.placeholder.com/300x200" alt="Justin Bieber" class="justin-pic">
+        <p>Justin Bieber is a global superstar, and this is his craziest fan page ever! Scroll down for more!</p>
+        <button onclick="changeBackground()">Click Me for a Surprise!</button>
+    </div>
+    <div class="music">
+        <h2>Top Justin Bieber Hits</h2>
+        <ul>
+            <li>Sorry</li>
+            <li>Baby</li>
+            <li>Love Yourself</li>
+            <li>Peaches</li>
+            <li>Yummy</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Justin Bieber Fan Club</p>
+    </footer>
+
+    <script>
+        function changeBackground() {
+            const colors = ['#ff69b4', '#00ffff', '#8a2be2', '#ff4500', '#4b0082'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
